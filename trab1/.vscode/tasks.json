@@ -1,0 +1,25 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "gcc build active file",
+            "command": "/usr/bin/gcc",
+            "args": [
+                "-g",
+                "-lm",
+                "-mavx2",
+                "-mavx",
+                "-std=c11",
+                "-march=native",
+                "-o",
+                "${fileDirname}/main",
+                "${file}",
+                "${fileDirname}/matrix_lib.c"
+            ],
+            "options": {
+                "cwd": "/usr/bin"
+            }
+        }
+    ],
+    "version": "2.0.0"
+}
